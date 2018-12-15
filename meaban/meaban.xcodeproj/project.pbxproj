@@ -12,6 +12,7 @@
 		011B9A1F21C5696B00A4A778 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011B9A1D21C5696B00A4A778 /* Main.storyboard */; };
 		011B9A2121C5696C00A4A778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011B9A2021C5696C00A4A778 /* Assets.xcassets */; };
 		011B9A2421C5696C00A4A778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011B9A2221C5696C00A4A778 /* LaunchScreen.storyboard */; };
+		9C08C59F062EB78D99258C80 /* Pods_meaban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFCAB17F73FD072D0FBF69B /* Pods_meaban.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		011B9A2021C5696C00A4A778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011B9A2321C5696C00A4A778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011B9A2521C5696C00A4A778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FFCAB17F73FD072D0FBF69B /* Pods_meaban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meaban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D159D6DBE68DBA0DC6AD70 /* Pods-meaban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meaban.debug.xcconfig"; path = "Pods/Target Support Files/Pods-meaban/Pods-meaban.debug.xcconfig"; sourceTree = "<group>"; };
+		E9966750420F4E83FB0E0082 /* Pods-meaban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meaban.release.xcconfig"; path = "Pods/Target Support Files/Pods-meaban/Pods-meaban.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C08C59F062EB78D99258C80 /* Pods_meaban.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				011B9A1821C5696B00A4A778 /* meaban */,
 				011B9A1721C5696B00A4A778 /* Products */,
+				FFDA0208C6FDE8F7B548CFB9 /* Pods */,
+				0C3BDCBB142AD4A2BCCA5A80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = meaban;
 			sourceTree = "<group>";
 		};
+		0C3BDCBB142AD4A2BCCA5A80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FFCAB17F73FD072D0FBF69B /* Pods_meaban.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFDA0208C6FDE8F7B548CFB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51D159D6DBE68DBA0DC6AD70 /* Pods-meaban.debug.xcconfig */,
+				E9966750420F4E83FB0E0082 /* Pods-meaban.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 011B9A2821C5696C00A4A778 /* Build configuration list for PBXNativeTarget "meaban" */;
 			buildPhases = (
+				43514F7B1F629297BCD5C34E /* [CP] Check Pods Manifest.lock */,
 				011B9A1221C5696B00A4A778 /* Sources */,
 				011B9A1321C5696B00A4A778 /* Frameworks */,
 				011B9A1421C5696B00A4A778 /* Resources */,
+				EF2CD6D6D7B81064DAC3F4C6 /* [CP] Embed Pods Frameworks */,
+				962F56318AC79BCD5F651619 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43514F7B1F629297BCD5C34E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-meaban-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		962F56318AC79BCD5F651619 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-meaban/Pods-meaban-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meaban/Pods-meaban-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF2CD6D6D7B81064DAC3F4C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-meaban/Pods-meaban-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-meaban/Pods-meaban-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		011B9A1221C5696B00A4A778 /* Sources */ = {
@@ -280,6 +380,7 @@
 		};
 		011B9A2921C5696C00A4A778 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D159D6DBE68DBA0DC6AD70 /* Pods-meaban.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +399,7 @@
 		};
 		011B9A2A21C5696C00A4A778 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9966750420F4E83FB0E0082 /* Pods-meaban.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
